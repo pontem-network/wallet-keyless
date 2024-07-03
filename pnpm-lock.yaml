@@ -4,13 +4,14 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@types/react': 17.0.14
+  '@types/react-dom': 17.0.14
+
 importers:
 
   .:
     dependencies:
-      jwt-decode:
-        specifier: ^4.0.0
-        version: 4.0.0
       ldrs:
         specifier: ^1.0.2
         version: 1.0.2
@@ -542,10 +543,6 @@ packages:
     resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
     engines: {node: '>=6'}
     hasBin: true
-
-  jwt-decode@4.0.0:
-    resolution: {integrity: sha512-+KJGIyHgkGuIq3IEBNftfhW/LfWhXUIY6OmyVWjliu5KH1y0fw7VQ8YndE2O4qZdMSd9SqbnC8GOcZEy0Om7sA==}
-    engines: {node: '>=18'}
 
   kolorist@1.8.0:
     resolution: {integrity: sha512-Y+60/zizpJ3HRH8DCss+q95yr6145JXZo46OTpFvDZWLfRCE4qChOyk1b26nMaNpfHHgxagk9dXT5OP0Tfe+dQ==}
@@ -1151,8 +1148,6 @@ snapshots:
   jsesc@2.5.2: {}
 
   json5@2.2.3: {}
-
-  jwt-decode@4.0.0: {}
 
   kolorist@1.8.0: {}
 

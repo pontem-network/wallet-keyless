@@ -1,11 +1,8 @@
 import { useState } from 'preact/hooks'
 import './app.css'
-import { jwtDecode } from 'jwt-decode';
-
 import { quantum } from 'ldrs'
 
 quantum.register()
-
 
 export function App() {
   const [error, setError] = useState('')
@@ -57,6 +54,7 @@ export function App() {
   return (
     <>
     {loading &&
+      //@ts-expect-error
       <l-quantum
         size="45"
         speed="1.75" 

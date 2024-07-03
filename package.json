@@ -1,5 +1,5 @@
 {
-  "name": "pontem-keyless-gateway",
+  "name": "wallet-keyless",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "jwt-decode": "^4.0.0",
     "ldrs": "^1.0.2",
     "preact": "^10.22.0"
   },
@@ -17,5 +16,9 @@
     "@preact/preset-vite": "^2.8.2",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
+  },
+  "resolutions": {
+    "@types/react": "17.0.14",
+    "@types/react-dom": "17.0.14"
   }
 }
