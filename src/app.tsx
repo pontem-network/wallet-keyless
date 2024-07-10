@@ -40,7 +40,10 @@ export function App() {
     }
 
     try {
-      await window.pontem.addKeylessAccount({ jwt })
+      const { result } = await window.pontem.addKeylessAccount({ jwt })
+      if (result.redirectTo) {
+        window.location.href = result.redirectTo
+      }
       setSuccess(true);
     } catch (e) {
       const error = e as Error;
@@ -62,7 +65,7 @@ export function App() {
       />
     }
     {!!error && <p id={'error'}>{error}</p>}
-    {!!success && <p id={'success'}>Success! Check your wallet!</p>}
+    {!!success && <p id={'success'}>Success! Redirecting...</p>}
       <button onClick={openEXT} disabled={loading || success}>GO</button>
     </>
   )

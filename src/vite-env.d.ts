@@ -2,6 +2,6 @@
 
 interface Window {
     pontem?: {
-        addKeylessAccount: (payload: { jwt: string }) => Promise<{ result: { status: 'OK' } }>
+        addKeylessAccount: (payload: { jwt: string }) => Promise<{ result: { status: 'OK', redirectTo: string } }>
     }
 } 
