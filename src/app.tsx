@@ -1,6 +1,8 @@
-import { useState } from 'preact/hooks'
+import { useMemo, useState } from 'preact/hooks'
 import './app.css'
 import { quantum } from 'ldrs'
+import SimpleLayout from './shared/components/simple-layout/simple-layout'
+import { jwtDecode } from 'jwt-decode'
 
 quantum.register()
 
@@ -16,6 +18,15 @@ export function App() {
   };
    
   const jwt = parseJWTFromURL(window.location.href)
+
+  const decodedData = useMemo(() => {
+    try {
+      return jwtDecode<{email?: string}>(jwt ?? '')
+    } catch (e) {
+      return undefined;
+    }
+
+  }, [jwt])
 
   const openEXT = async () => {
     setLoading(true);
@@ -55,7 +66,18 @@ export function App() {
 
 
   return (
-    <>
+    <SimpleLayout navigateBackLink className='main'>
+      <h1>{'Create keyless wallet with '}</h1>
+      <h2>{decodedData?.email ?? 'msinkevic103@gmail.ocm'}</h2>
+      <span>
+      Keyless Wallets replace the traditional private key or seed phrases with three
+      <br/>
+      independently created mathematical "secret shares". 
+      <br/><br/>
+      The Personal Share is stored on your device, the Remote Share is encrypted on the 
+      <br/>
+      Self Chain, and the Recovery Share is sent to users for secure backup.
+      </span>
     {loading &&
       //@ts-expect-error
       <l-quantum
@@ -66,7 +88,7 @@ export function App() {
     }
     {!!error && <p id={'error'}>{error}</p>}
     {!!success && <p id={'success'}>Success! Redirecting...</p>}
-      <button onClick={openEXT} disabled={loading || success}>GO</button>
-    </>
+      <button onClick={openEXT} disabled={loading || success}>Create</button>
+    </SimpleLayout>
   )
 }

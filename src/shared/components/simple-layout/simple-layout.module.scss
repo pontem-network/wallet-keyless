@@ -1,0 +1,139 @@
+.container {
+    position: relative;
+    max-width: 900px;
+    min-width: 360px;
+    margin: 0 auto 42px;
+    border-radius: 8px;
+    max-height: calc(100vh - 188px - 52px); // 88px - header, 52px - container margin
+    min-height: calc(100vh - 188px - 52px); // 88px - header, 52px - container margin
+    height: 100%;
+    overflow: auto;
+    width: 100%;
+    background: linear-gradient(52.43deg, #14072E 22.22%, #0A081E 59.58%);
+  }
+  
+  .container.hasBackButton {
+    padding-top: 65px;
+  }
+  
+  .logo {
+    display: block;
+    max-width: 40px;
+    max-height: 40px;
+  }
+  
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .help {
+    padding: 8px 6px;
+    border-radius: 50px;
+    background-color: #28253E77;
+    color: #E5E4FA;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    gap: 8px;
+    width: 72px;
+    height: 32px;
+  }
+  
+  .help:hover {
+    text-decoration: none;
+    background-color: #28253E;
+  }
+  
+  .navigationLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 24px auto;
+    width: 100%;
+  }
+  
+  .help span {
+    width: 16px;
+    height: 16px;
+    background-color: #E5E4FA;
+    color: #28253E;
+    font-size: 11px;
+    line-height: 16px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 16px;
+  }
+
+  .help p {
+    padding: 0;
+    margin: 0;
+  }
+  
+  .backButton {
+    background: #1C1C33;
+    padding: 8px;
+    cursor: pointer;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+  
+  }
+  
+  .backButton:hover {
+    background: #28253E77;
+  }
+  
+  .header {
+    width: 100%;
+    position: absolute;
+    height: 64px;
+    border-bottom: 1px solid #e6e5fa26;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    left: 0;
+    top: 0;
+  }
+  
+  .headerName {
+    justify-self: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .backButton {
+    z-index: 2;
+  }
+  
+  .backButton img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .container {
+    padding: 0;
+  }
+  
+  @media (max-width: 932px) {
+    .container {
+      border-radius: 0;
+      width: 100%;
+      max-width: 100vw;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .container {
+      width: 360px;
+    }
+  }
+  

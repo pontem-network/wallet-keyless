@@ -9,11 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
+    "jwt-decode": "^4.0.0",
     "ldrs": "^1.0.2",
     "preact": "^10.22.0"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.8.2",
+    "sass": "^1.77.8",
     "typescript": "^5.2.2",
     "vite": "^5.3.1"
   },

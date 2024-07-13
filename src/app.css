@@ -1,12 +1,52 @@
 #app {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    margin-top: 32px;
+    width: 100%;
+    max-width: 550px;
+  }
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42.19px;
+    color: #E5E4FA;
+  }
+
+  h2 {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42.19px;
+    color: #946BEC;
+  }
+
+  span {
+    color: #9594AA;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    padding: 0;
+    margin: 8px 0 0 0;
+  }
 }
 
 .logo {
