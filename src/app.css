@@ -1,5 +1,4 @@
 #app {
-  max-width: 1280px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -49,21 +48,51 @@
   }
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.preact:hover {
-  filter: drop-shadow(0 0 2em #673ab8aa);
+.error_details {
+  margin-top: 16px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  justify-content: center;
 }
 
-.card {
-  padding: 2em;
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
 }
 
-.read-the-docs {
-  color: #888;
+.error_image {
+  position: relative;
+  margin-top: -80px !important;
+  opacity: 0;
+  transform: scale(0);
+  animation: appear 1s ease-out forwards;
+}
+
+.upp {
+  margin-top: -60px !important;
+}
+
+.buttons_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  button {
+    width: 274px;
+  }
 }

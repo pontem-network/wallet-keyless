@@ -49,3 +49,7 @@ button:focus-visible {
   border: none;
   outline: none;
 }
+
+.button_secondary {
+  background: #43395B;
+}
