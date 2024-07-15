@@ -77,7 +77,7 @@ export function App() {
     <SimpleLayout navigateBackLink className='main'>
       {!error ? <>
         <h1>{'Create keyless wallet with '}</h1>
-        <h2>{decodedData?.email ?? 'msinkevic103@gmail.ocm'}</h2>
+        <h2>{decodedData?.email}</h2>
         <span>
           Keyless Wallets replace the traditional private key or seed phrases with three
           <br/>
